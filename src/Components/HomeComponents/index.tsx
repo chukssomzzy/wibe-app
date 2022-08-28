@@ -1,0 +1,5 @@
+export { default as CoverVideo } from './CoverVideo' 
+export { default as Logo } from './Logo'
+export { default as AboutUs } from './AboutUs'
+export { default as Shop } from './Shop' 
+export { default as ScrollTriggerProxy } from './ScrollTriggerProxy'
