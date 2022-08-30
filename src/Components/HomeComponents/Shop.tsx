@@ -2,6 +2,8 @@ import React, {  useEffect, useLayoutEffect, useRef } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Images from '../../assets/Images'
+import Product from './Product'
 
 type Props = {}
 
@@ -60,7 +62,6 @@ const Right = styled.div`
     justify-content: flex-start; 
     align-items: center; 
     h1 {
-      width: 5rem; 
       margin: 0 2rem;  
     }
 `
@@ -75,7 +76,7 @@ const Shop = (props: Props) => {
      let scrollingElement = horizontalRef.current
      let pinWrapWidth = scrollingElement?.offsetWidth as number; 
      let ti = gsap.timeline(); 
-     console.log(pinWrapWidth)
+     console.log(pinWrapWidth, 'pinWrapwidth')
      setTimeout( 
       ()=> {
         ti.to(element,{
@@ -86,18 +87,19 @@ const Shop = (props: Props) => {
             scroller: '.App', // locomotive element
             scrub: true, 
             pin: true,
-            // markers: true
+            pinType: 'transform',
+           //markers: true
           }, 
           // increasing the scrolling height of the element as well as the scrolling element width 
-          height: `${scrollingElement?.scrollWidth}px`, 
-          ease: "none",
+           height: `${scrollingElement?.scrollWidth}px`, 
+           ease: "none",
 
         })
         ti.to(scrollingElement,{
           scrollTrigger:{
-            trigger: scrollingElement,
+            trigger: element,
             start: 'top top', 
-            end: pinWrapWidth, 
+            end: `+=${pinWrapWidth}`, 
             scroller: ".App", // locomotive element
             scrub: true, 
             // markers: true
@@ -115,6 +117,9 @@ const Shop = (props: Props) => {
       }
   }, [])
   
+  const ProductMap = Images.map(({img, title}) =>(
+    <Product img={img} title={title} />
+  ))
   return (
     <Section ref={refContainer}>
         <Title data-scroll data-scroll-speed='-1'>
@@ -133,23 +138,9 @@ It is great for us to carry our new clothes all around the country and look diff
            
         </Left>
         <Right className="scrollRight" ref={horizontalRef}>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
-           <h1>img</h1>
+          {
+            ProductMap
+          }
         </Right>
     </Section>
   )

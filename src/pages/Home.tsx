@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverVideo, Logo, AboutUs, Shop, ScrollTriggerProxy }  from '../Components/HomeComponents'
+import { CoverVideo, Logo, AboutUs, Shop, Banner}  from '../Components/HomeComponents'
 import Navbar from '../Components/HomeComponents/Navbar'
 type Props = {}
 
@@ -14,19 +14,22 @@ const Section = styled.section`
 const Home = (props: Props) => {
   
   return ( 
-    <>
-     <ScrollTriggerProxy />
-    <Section className='App' data-scroll-section>
+    <Section data-scroll-section>
        <CoverVideo /> 
        <Navbar />
        <AboutUs/>
        <Shop />
        {/* <Logo /> */}
+       <Banner />
+       <h1>Logo</h1>
+       <h1>Logo</h1>
+       <h1>Logo</h1>
+       <h1>Logo</h1>
+       <h1>Logo</h1>
        <h1>Logo</h1>
        {/* animate presence */}
        
     </Section>
-    </>
   )
 }
 
