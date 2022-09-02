@@ -39,20 +39,22 @@ const BannerComponent = styled.h1`
 const Banner = (props: Props) => {
   return (
     <Section>
-        <Container>
+        <Container id='up'>
             <BannerComponent>
                 <span 
-                data-scroll 
+                data-scroll-target='#up' 
                 data-scroll-direction='horizontal' 
-                data-scroll-speed='6'
+                data-scroll-speed='8'
+                data-scroll
                 >Fashion is the armour.</span>
             </BannerComponent>
                 
             <BannerComponent>
                 <span
                  data-scroll
-                  data-scroll-direction='horizontal'
-                  data-scroll-speed='6'
+                  data-scroll-direction='vertical'
+                  data-scroll-speed='-8'
+                  data-scroll-target='#up'
                   >to survive everyday life.</span>
             </BannerComponent>
                   
@@ -61,22 +63,25 @@ const Banner = (props: Props) => {
                   data-scroll
                    data-scroll-direction='horizontal'
                    data-scroll-speed='6'
+                   data-scroll-target='#up'
                    >One is never over-dressed or</span> 
              </BannerComponent>
                    
              <BannerComponent>
                  <span 
-                 data-scroll 
+                 data-scroll
                  data-scroll-direction='horizontal' 
-                 data-scroll-speed='6'
+                 data-scroll-speed='-4'
+                 data-scroll-target='#up'
                  >under-dressed</span>
              </BannerComponent>
                  
              <BannerComponent>
                  <span 
                   data-scroll
-                   data-scroll-direction='horizontal'
+                   data-scroll-direction='vertical'
                    data-scroll-speed='6'
+                   data-scroll-target='#up'
                    >With a little black dress</span> 
              </BannerComponent>
                    

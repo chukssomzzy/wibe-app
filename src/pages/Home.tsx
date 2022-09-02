@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CoverVideo, Logo, AboutUs, Shop, Banner}  from '../Components/HomeComponents'
+import { CoverVideo, Logo, AboutUs, Shop, Banner, NewArrivals, Footer}  from '../Components/HomeComponents'
 import Navbar from '../Components/HomeComponents/Navbar'
 type Props = {}
 
@@ -21,16 +21,11 @@ const Home = (props: Props) => {
        <Shop />
        {/* <Logo /> */}
        <Banner />
-       <h1>Logo</h1>
-       <h1>Logo</h1>
-       <h1>Logo</h1>
-       <h1>Logo</h1>
-       <h1>Logo</h1>
-       <h1>Logo</h1>
+       <NewArrivals />
        {/* animate presence */}
-       
+      <Footer />
     </Section>
-  )
+  ) 
 }
 
 export default Home

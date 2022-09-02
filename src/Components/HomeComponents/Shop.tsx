@@ -83,7 +83,7 @@ const Shop = (props: Props) => {
           scrollTrigger:{
             trigger: element,
             start: 'top top', 
-            end: pinWrapWidth, 
+            end: `+=${pinWrapWidth}`, 
             scroller: '.App', // locomotive element
             scrub: true, 
             pin: true,
@@ -118,7 +118,7 @@ const Shop = (props: Props) => {
   }, [])
   
   const ProductMap = Images.map(({img, title}) =>(
-    <Product img={img} title={title} />
+    <Product img={img} title={title} newArrivals={false} />
   ))
   return (
     <Section ref={refContainer}>

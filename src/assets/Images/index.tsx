@@ -27,4 +27,15 @@ const Images= [
 { img: img10, title: 'Special Editions' }
 ]
 
+
+export const Img2 = [
+    {img: img11, title: 'Denim'},
+    {img: img12, title: 'Cool Dresses'},
+    {img: img13, title: 'Jacket'},
+    {img: img14, title: 'T-shirts'}
+]
+
 export default Images
+
+
+
